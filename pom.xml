@@ -55,7 +55,7 @@
 				<version>1.7.10</version>
 				<configuration>
 					<container>
-						<containerId>tomcat</containerId>
+						<containerId>tomcat8x</containerId>
 						<!--<home>/usr/local/opt/tomcat@8.0/libexec</home> -->
 						<home>/opt/tomcat/apache-tomcat-9.0.8</home>
 					</container>
