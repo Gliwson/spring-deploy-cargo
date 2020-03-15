@@ -56,16 +56,17 @@
 				<configuration>
 					<container>
 						<containerId>tomcat</containerId>
-						<home>${catalina.base}</home>
+						<!--<home>/usr/local/opt/tomcat@8.0/libexec</home> -->
+						<home>${catalina.home}</home>
 					</container>
 					<configuration>
 						<type>existing</type>
-						<home>${catalina.base}</home>
+						<home>${catalina.home.webapps}</home>
 					</configuration>
 					<deployables>
 						<deployable>
 							<properties>
-								<context>cargo</context>
+								<context>ROOT</context>
 							</properties>
 						</deployable>
 					</deployables>
