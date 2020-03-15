@@ -61,7 +61,7 @@
 					</container>
 					<configuration>
 						<type>existing</type>
-						<home>${catalina.home.webapps}</home>
+						<home>${catalina.home}</home>
 					</configuration>
 					<deployables>
 						<deployable>
