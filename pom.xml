@@ -65,7 +65,7 @@
 					<deployables>
 						<deployable>
 							<properties>
-								<context>cargo</context>
+								<context>ROOT</context>
 							</properties>
 						</deployable>
 					</deployables>
