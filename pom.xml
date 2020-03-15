@@ -57,11 +57,11 @@
 					<container>
 						<containerId>tomcat</containerId>
 						<!--<home>/usr/local/opt/tomcat@8.0/libexec</home> -->
-						<home>${catalina.home}</home>
+						<home>/opt/tomcat/apache-tomcat-9.0.8</home>
 					</container>
 					<configuration>
 						<type>existing</type>
-						<home>${catalina.home}</home>
+						<home>/opt/tomcat/apache-tomcat-9.0.8/webapps</home>
 					</configuration>
 					<deployables>
 						<deployable>
