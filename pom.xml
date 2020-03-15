@@ -55,7 +55,7 @@
 				<version>1.6.2</version>
 				<configuration>
 					<container>
-						<containerId>tomcat8x</containerId>
+						<containerId>tomcat</containerId>
 						<home>${catalina.base}</home>
 					</container>
 					<configuration>
