@@ -1,93 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>pl.javastart</groupId>
-    <artifactId>spring-deploy-cargo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+	<groupId>pl.javastart</groupId>
+	<artifactId>spring-deploy-cargo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 
-    <name>spring-deploy-cargo</name>
-    <description>simple war app deployment with cargo plugin</description>
+	<name>spring-deploy-cargo</name>
+	<description>simple war app deployment with cargo plugin</description>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 
-    </dependencies>
+	</dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.7.10</version>
-                <configuration>
-
-                    <container>
-                        <containerId>tomcat9x</containerId>
-                        <type>remote</type>
-                    </container>
-                    <configuration>
-                        <type>runtime</type>
-                        <properties>
-                            <cargo.remote.username>admin</cargo.remote.username>
-                            <cargo.remote.password>admin</cargo.remote.password>
-                            <cargo.tomcat.manager.url>http://localhost:8081/manager/text
-                            </cargo.tomcat.manager.url>
-                        </properties>
-                    </configuration>
-
-                    <!--					<container>-->
-                    <!--						<containerId>tomcat9x</containerId>-->
-                    <!--						<home>/opt/tomcat/apache-tomcat-9.0.8</home>-->
-                    <!--					</container>-->
-                    <!--					<configuration>-->
-                    <!--						<type>existing</type>-->
-                    <!--						<home>/opt/tomcat/apache-tomcat-9.0.8</home>-->
-                    <!--					</configuration>-->
-                    <!--					<deployables>-->
-                    <!--						<deployable>-->
-                    <!--							<properties>-->
-                    <!--								<context>gliwsek</context>-->
-                    <!--							</properties>-->
-                    <!--						</deployable>-->
-                    <!--					</deployables>-->
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.6.2</version>
+				<configuration>
+					<container>
+						<containerId>tomcat8x</containerId>
+						<home>${catalina.base}</home>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>${catalina.base}</home>
+					</configuration>
+					<deployables>
+						<deployable>
+							<properties>
+								<context>cargo</context>
+							</properties>
+						</deployable>
+					</deployables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
