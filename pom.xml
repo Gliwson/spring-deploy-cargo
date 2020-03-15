@@ -66,7 +66,7 @@
 					<deployables>
 						<deployable>
 							<properties>
-								<context>ROOT</context>
+								<context>gliwsek</context>
 							</properties>
 						</deployable>
 					</deployables>
