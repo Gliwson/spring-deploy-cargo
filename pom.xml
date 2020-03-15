@@ -61,7 +61,7 @@
 					</container>
 					<configuration>
 						<type>existing</type>
-						<home>/opt/tomcat/apache-tomcat-9.0.8</home>
+						<home>/opt/tomcat/apache-tomcat-9.0.8/webapps/ggg</home>
 					</configuration>
 					<deployables>
 						<deployable>
