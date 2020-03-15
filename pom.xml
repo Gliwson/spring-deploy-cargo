@@ -56,19 +56,12 @@
 				<configuration>
 					<container>
 						<containerId>tomcat9x</containerId>
-						<type>embedded</type>
 						<home>/opt/tomcat/apache-tomcat-9.0.8</home>
 					</container>
-
-					<!--					<container>-->
-<!--						<containerId>tomcat9x</containerId>-->
-<!--						&lt;!&ndash;<home>/usr/local/opt/tomcat@8.0/libexec</home> &ndash;&gt;-->
-<!--						<home>/opt/tomcat/apache-tomcat-9.0.8</home>-->
-<!--					</container>-->
-<!--					<configuration>-->
-<!--						<type>existing</type>-->
-<!--						<home>/opt/tomcat/apache-tomcat-9.0.8</home>-->
-<!--					</configuration>-->
+					<configuration>
+						<type>existing</type>
+						<home>/opt/tomcat/apache-tomcat-9.0.8</home>
+					</configuration>
 <!--					<deployables>-->
 <!--						<deployable>-->
 <!--							<properties>-->
