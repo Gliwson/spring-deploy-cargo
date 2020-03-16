@@ -10,7 +10,7 @@ public class HomeController {
     @RequestMapping("/")
     @ResponseBody
     public String home() {
-        return "Application war deployed with cargo";
+        return "Application war deployed with cargo gliwson";
     }
     
 }
