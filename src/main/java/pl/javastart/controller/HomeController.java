@@ -26,5 +26,11 @@ public class HomeController {
         model.addAttribute("pointList", dataRepo.getPointList());
         return "index.html";
     }
+
+    @RequestMapping("/wirus2")
+    public String getMa2p(Model model) {
+        model.addAttribute("pointList", dataRepo.getPointList());
+        return "index";
+    }
     
 }
