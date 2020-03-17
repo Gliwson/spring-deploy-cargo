@@ -16,13 +16,6 @@ public class HomeController {
         this.dataRepo = dataRepo;
     }
 
-    @RequestMapping("/")
-    @ResponseBody
-    public String home() {
-        return "Application war deployed with cargo gliwson";
-    }
-
-
     @RequestMapping(method = RequestMethod.GET)
     public String getMap(Model model) {
         model.addAttribute("pointList", dataRepo.getPointList());
