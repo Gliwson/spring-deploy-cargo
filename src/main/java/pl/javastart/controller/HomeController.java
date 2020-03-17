@@ -24,7 +24,7 @@ public class HomeController {
     @RequestMapping("/wirus")
     public String getMap(Model model) {
         model.addAttribute("pointList", dataRepo.getPointList());
-        return "index.html";
+        return "index";
     }
 
     @RequestMapping("/wirus2")
